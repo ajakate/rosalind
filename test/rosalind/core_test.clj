@@ -2,6 +2,11 @@
   (:require [clojure.test :refer :all]
             [rosalind.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+;; Problem 1
+(deftest problem-1
+  (testing "Counting the number of A, C, G and T strings"
+    (is
+      (=
+        '(20 12 17 21)
+        (count-nucleotides
+         "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")))))
