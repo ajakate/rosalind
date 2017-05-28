@@ -1,10 +1,12 @@
-# rosalind
+# Project Rosalind
 
-A Clojure library designed to ... well, that part is up to you.
+Trying to solve the Project Rosalind problems using clojure.
 
 ## Usage
 
-FIXME
+Not sure, I'm using the sample data sets as tests, so running
+`lein test`
+should run through each problem number's initial example.
 
 ## License
 
