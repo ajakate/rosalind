@@ -10,3 +10,13 @@
         '(20 12 17 21)
         (count-nucleotides
          "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")))))
+
+
+;; Problem 2
+(deftest problem-2
+  (testing "Transcribing DNA to RNA"
+    (is
+      (=
+        "GAUGGAACUUGACUACGUAAAUU"
+        (dna-to-rna
+         "GATGGAACTTGACTACGTAAATT")))))

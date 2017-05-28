@@ -7,3 +7,7 @@
       (fn [nucleotide]
         (get frequency-map nucleotide))
       [\A \C \G \T])))
+
+(defn dna-to-rna
+  [dna-sequence]
+  (clojure.string/replace dna-sequence #"T" "U"))
