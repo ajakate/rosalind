@@ -20,3 +20,13 @@
         "GAUGGAACUUGACUACGUAAAUU"
         (dna-to-rna
          "GATGGAACTTGACTACGTAAATT")))))
+
+
+;; Problem 3
+(deftest problem-3
+  (testing "Reverse complement of DNA"
+    (is
+      (=
+        "ACCGGGTTTT"
+        (reverse-complement
+         "AAAACCCGGT")))))
