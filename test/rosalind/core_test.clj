@@ -30,3 +30,13 @@
         "ACCGGGTTTT"
         (reverse-complement
          "AAAACCCGGT")))))
+
+
+;; GC Content Problem
+(deftest gc_content
+  (testing "GC Content from FASTA file"
+    (is
+      (=
+        { 'Rosalind_0808 60.919540
+        ( highest-gc-content-from-fasta-file
+         "resources/gc_content.txt")))))
