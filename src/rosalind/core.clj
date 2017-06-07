@@ -33,7 +33,6 @@
   (clojure.string/replace dna-sequence #"T" "U"))
 
 
-
 (defn reverse-complement
   [sequence]
   (apply str
