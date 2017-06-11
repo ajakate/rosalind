@@ -56,4 +56,4 @@
 
 
 (defn highest-gc-content-from-fasta-file [fasta-file]
-   (apply max-key val (map-values (parse-fasta-file "resources/gc_content.txt") gc-content)))
+   (apply max-key val (map-values (parse-fasta-file fasta-file) gc-content)))
