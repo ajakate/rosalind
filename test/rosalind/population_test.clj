@@ -8,5 +8,5 @@
     (is
       (=
         19
-        (rabbit-pairs 34 5)))))
+        (rabbit-pairs 5 3)))))
 
