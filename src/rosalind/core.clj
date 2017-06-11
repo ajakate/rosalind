@@ -1,5 +1,8 @@
 (ns rosalind.core)
 
+(defn map-values [m f]
+  (into {} (for [[k v] m] [k (f v)])))
+
 (def dna-base-pairs
   {\A \T,
    \C \G,
@@ -43,10 +46,14 @@
              sequence))))
 
 
-(defn highest-gc-content-from-fasta-file
-  [fasta-file]
-  (parse-fasta-file "resources/gc_content.txt"))
+(defn gc-content [dna-sequence]
+  (let [frequency-map (frequencies dna-sequence)
+        num-of-gc (+ (get frequency-map \G)
+                      (get frequency-map \C))]
+    (* 100
+       (double
+         (/ num-of-gc (count dna-sequence))))))
 
 
-
-  (parse-fasta-file "resources/gc_content.txt")
+(defn highest-gc-content-from-fasta-file [fasta-file]
+   (apply max-key val (map-values (parse-fasta-file "resources/gc_content.txt") gc-content)))

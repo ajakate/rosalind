@@ -37,6 +37,6 @@
   (testing "GC Content from FASTA file"
     (is
       (=
-        { 'Rosalind_0808 60.919540
+        ["Rosalind_0808" 60.91954022988506]
         ( highest-gc-content-from-fasta-file
          "resources/gc_content.txt")))))
