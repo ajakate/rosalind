@@ -57,3 +57,12 @@
 
 (defn highest-gc-content-from-fasta-file [fasta-file]
    (apply max-key val (map-values (parse-fasta-file fasta-file) gc-content)))
+
+
+(defn hamming-distance [strand1 strand2]
+  (count
+    (filter #(not %1)
+      (map
+        (fn [pair]
+          (= (first pair) (second pair)))
+        (map vector strand1 strand2)))))

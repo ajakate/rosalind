@@ -40,3 +40,14 @@
         ["Rosalind_0808" 60.91954022988506]
         ( highest-gc-content-from-fasta-file
          "resources/gc_content.txt")))))
+
+
+;; Hamming distance problem
+(deftest hamming_distance
+  (testing "Hamming distance between two DNA strands"
+    (is
+      (=
+        7
+        ( hamming-distance
+            "GAGCCTACTAACGGGAT"
+            "CATCGTAATGACGGCCT")))))
